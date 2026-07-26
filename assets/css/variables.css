@@ -1,0 +1,35 @@
+/* Design tokens for the property listing landing page */
+
+:root {
+  /* Colors */
+  --color-bg: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-accent: #C96F4A;
+  --color-accent-light: #E9C3B2;
+  --color-text: #3A3532;
+  --color-text-secondary: #6B655F;
+  --color-border: #E5DFD6;
+
+  /* Typography */
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --fs-hero: 2.5rem;
+  --fs-h2: 1.75rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* Radius and shadow */
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --shadow-soft: 0 2px 12px rgba(58, 53, 50, 0.08);
+
+  /* Transitions */
+  --transition-default: 0.2s ease;
+}
