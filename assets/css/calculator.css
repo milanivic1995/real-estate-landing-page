@@ -1,2 +1,110 @@
-/* Mortgage calculator styles */
-/* TODO: card container, input/slider styling, highlighted output number */
+.calculator {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: var(--space-xl) var(--space-md);
+}
+
+.calculator__heading {
+	font-size: var(--fs-h2);
+	margin-bottom: var(--space-lg);
+}
+
+.calculator__inputs {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	margin-bottom: var(--space-lg);
+}
+
+.calculator__field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+	font-size: var(--fs-small);
+	color: var(--color-text-secondary);
+}
+
+.calculator__number-input {
+	font-family: var(--font-body);
+	font-size: var(--fs-body);
+	color: var(--color-text);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-btn);
+	padding: var(--space-xs) var(--space-sm);
+	background: var(--color-surface);
+}
+
+.calculator__number-input:focus {
+	outline: none;
+	border-color: var(--color-accent);
+}
+
+.calculator__slider {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 4px;
+	border-radius: 2px;
+	background: var(--color-border);
+}
+
+.calculator__slider::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: var(--color-accent);
+	cursor: pointer;
+}
+
+.calculator__slider::-moz-range-thumb {
+	width: 18px;
+	height: 18px;
+	border: none;
+	border-radius: 50%;
+	background: var(--color-accent);
+	cursor: pointer;
+}
+
+.calculator__term-toggle {
+	display: flex;
+	gap: var(--space-xs);
+}
+
+.calculator__term-btn {
+	flex: 1;
+	padding: var(--space-xs) var(--space-sm);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-btn);
+	background: var(--color-surface);
+	color: var(--color-text);
+	font-size: var(--fs-body);
+	transition: background var(--transition-default), color var(--transition-default);
+}
+
+.calculator__term-btn--active {
+	background: var(--color-accent);
+	color: #FFFFFF;
+	border-color: var(--color-accent);
+}
+
+.calculator__result {
+	background: var(--color-accent-light);
+	border-radius: var(--radius-card);
+	padding: var(--space-lg);
+	text-align: center;
+}
+
+.calculator__result-label {
+	font-size: var(--fs-small);
+	color: var(--color-text-secondary);
+	margin-bottom: var(--space-xs);
+}
+
+.calculator__result-value {
+	font-family: var(--font-heading);
+	font-size: var(--fs-hero);
+	color: var(--color-accent);
+	margin: 0;
+}

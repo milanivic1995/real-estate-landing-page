@@ -16,6 +16,8 @@ get_header();
 
         <?php get_template_part( 'template-parts/section-description' ); ?>
 
+        <?php get_template_part( 'template-parts/section-calculator' ); ?>
+
 	</main>
 </div>
 
