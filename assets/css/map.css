@@ -1,2 +1,27 @@
-/* Map embed section styles */
-/* TODO: iframe container, spacing, border-radius */
+.map {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: var(--space-xl) var(--space-md);
+}
+
+.map__heading {
+	font-size: var(--fs-h2);
+	margin-bottom: var(--space-md);
+}
+
+.map__embed {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border-radius: var(--radius-card);
+	overflow: hidden;
+}
+
+.map__embed iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
