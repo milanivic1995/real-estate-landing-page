@@ -33,6 +33,14 @@ function astra_child_property_listing_assets() {
 	);
 
 	wp_enqueue_style(
+		'property-description',
+		$css_uri . 'description.css',
+		array( 'property-base' ),
+		filemtime( $css_dir . 'description.css' ),
+		'all'
+	);
+
+	wp_enqueue_style(
 		'property-hero',
 		$css_uri . 'hero.css',
 		array( 'property-base' ),
