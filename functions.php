@@ -80,7 +80,24 @@ function astra_child_property_listing_assets() {
 		'all'
 	);
 
-	// JS enqueue calls will go here (Step 3).
+	$js_dir = get_stylesheet_directory() . '/assets/js/';
+	$js_uri = get_stylesheet_directory_uri() . '/assets/js/';
+
+	wp_enqueue_script(
+		'property-gallery',
+		$js_uri . 'gallery.js',
+		array(),
+		filemtime( $js_dir . 'gallery.js' ),
+		true
+	);
+
+	wp_enqueue_script(
+		'property-calculator',
+		$js_uri . 'calculator.js',
+		array(),
+		filemtime( $js_dir . 'calculator.js' ),
+		true
+	);
 
 }
 add_action( 'wp_enqueue_scripts', 'astra_child_property_listing_assets' );
