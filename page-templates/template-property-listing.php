@@ -7,13 +7,6 @@
 get_header();
 ?>
 
-<!-- TODO: get_template_part calls for each section will go here -->
-<!-- section-hero -->
-<!-- section-gallery -->
-<!-- section-description -->
-<!-- section-calculator -->
-<!-- section-map -->
-<!-- section-contact -->
-<!-- section-footer -->
+<?php get_template_part( 'template-parts/section-hero' ); ?>
 
 <?php get_footer(); ?>
