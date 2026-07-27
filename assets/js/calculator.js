@@ -11,6 +11,10 @@ function calculateAndUpdate() {
 	const downPaymentPercent = parseFloat(downPaymentSlider.value);
 	const interestRatePercent = parseFloat(interestSlider.value);
 
+    if (isNaN(price) || isNaN(downPaymentPercent) || isNaN(interestRatePercent)) {
+	return;
+    }
+
 	const activeTermBtn = document.querySelector('.calculator__term-btn--active');
 	const termYears = parseInt(activeTermBtn.dataset.term, 10);
 
@@ -35,3 +39,9 @@ termButtons.forEach((btn) => {
 		calculateAndUpdate();
 	});
 });
+
+priceInput.addEventListener('input', calculateAndUpdate);
+downPaymentSlider.addEventListener('input', calculateAndUpdate);
+interestSlider.addEventListener('input', calculateAndUpdate);
+
+calculateAndUpdate();
