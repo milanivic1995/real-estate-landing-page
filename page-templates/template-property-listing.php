@@ -22,6 +22,8 @@ get_header();
 
         <?php get_template_part( 'template-parts/section-contact' ); ?>
 
+        <?php get_template_part( 'template-parts/section-footer' ); ?>
+
 	</main>
 </div>
 
