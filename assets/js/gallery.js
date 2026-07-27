@@ -22,3 +22,13 @@ function updateGallery(index) {
 thumbnails.forEach((thumb, index) => {
 	thumb.addEventListener('click', () => updateGallery(index));
 });
+
+nextArrow.addEventListener('click', () => {
+	const newIndex = (currentIndex + 1) % thumbnails.length;
+	updateGallery(newIndex);
+});
+
+prevArrow.addEventListener('click', () => {
+	const newIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
+	updateGallery(newIndex);
+});
