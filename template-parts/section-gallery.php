@@ -25,9 +25,15 @@ $gallery_ids = array( 16, 19, 18, 20, 14, 13, 15, 17 );
 
 	<div class="gallery__thumbs">
 		<?php foreach ( $gallery_ids as $index => $attachment_id ) : ?>
+			<?php
+			$full_src = wp_get_attachment_image_url( $attachment_id, 'large' );
+			$alt_text = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
+			?>
 			<button
 				class="gallery__thumb<?php echo 0 === $index ? ' gallery__thumb--active' : ''; ?>"
 				data-index="<?php echo esc_attr( $index ); ?>"
+				data-full-src="<?php echo esc_url( $full_src ); ?>"
+				data-alt="<?php echo esc_attr( $alt_text ); ?>"
 			>
 				<?php
 				echo wp_get_attachment_image(
