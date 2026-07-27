@@ -1,2 +1,86 @@
-/* Contact form plugin override styles */
-/* TODO: restyle plugin-generated markup to match design tokens */
+.contact {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: var(--space-xl) var(--space-md);
+}
+
+.contact__heading {
+	font-size: var(--fs-h2);
+	margin-bottom: var(--space-lg);
+}
+
+.contact__field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+	margin-bottom: var(--space-md);
+}
+
+.contact__field label {
+	font-size: var(--fs-small);
+	color: var(--color-text-secondary);
+}
+
+.contact__input,
+.contact__textarea {
+	font-family: var(--font-body);
+	font-size: var(--fs-body);
+	color: var(--color-text);
+	border: 1px solid var(--color-border);
+	border-radius: var(--radius-btn);
+	padding: var(--space-xs) var(--space-sm);
+	background: var(--color-surface);
+}
+
+.contact__textarea {
+	min-height: 120px;
+	resize: vertical;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+	outline: none;
+	border-color: var(--color-accent);
+}
+
+.contact__submit-wrap {
+	margin-top: var(--space-md);
+}
+
+.contact__submit {
+	background: var(--color-accent);
+	color: #FFFFFF;
+	border: none;
+	border-radius: var(--radius-btn);
+	padding: var(--space-sm) var(--space-lg);
+	font-family: var(--font-body);
+	font-size: var(--fs-body);
+	font-weight: 500;
+	cursor: pointer;
+	transition: background var(--transition-default);
+}
+
+.contact__submit:hover,
+.contact__submit:focus,
+.contact__submit:active {
+	background: var(--color-text);
+	color: #FFFFFF;
+}
+
+/* Contact Form 7 generated elements */
+
+.wpcf7-not-valid-tip {
+	display: block;
+	color: #C0392B;
+	font-size: var(--fs-small);
+	margin-top: var(--space-xs);
+}
+
+.wpcf7-response-output {
+	margin-top: var(--space-md);
+	padding: var(--space-sm) var(--space-md);
+	border-radius: var(--radius-btn);
+	background: var(--color-accent-light);
+	color: var(--color-text);
+	font-size: var(--fs-small);
+}

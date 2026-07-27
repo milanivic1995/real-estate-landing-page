@@ -20,6 +20,8 @@ get_header();
 
         <?php get_template_part( 'template-parts/section-map' ); ?>
 
+        <?php get_template_part( 'template-parts/section-contact' ); ?>
+
 	</main>
 </div>
 
