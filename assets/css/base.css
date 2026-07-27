@@ -52,3 +52,42 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+/**
+ * Astra (parent theme) applies its own global button/input color rules
+ * on :hover, :focus, and :active states (targeting plain `button`,
+ * `input[type="submit"]`, etc.) that can override our own component
+ * styling due to matching specificity or stylesheet load order.
+ *
+ * This block is a single, deliberate, contained override: it forces our
+ * own interactive components to keep their own colors regardless of
+ * Astra's rules, rather than patching this same conflict individually
+ * in every section's CSS file.
+ */
+.calculator__term-btn:hover,
+.calculator__term-btn:focus,
+.calculator__term-btn:active,
+.calculator__term-btn--active {
+	background-color: var(--color-accent) !important;
+	color: #FFFFFF !important;
+	border-color: var(--color-accent) !important;
+}
+
+.hero__cta:hover,
+.hero__cta:focus,
+.hero__cta:active,
+.contact__submit:hover,
+.contact__submit:focus,
+.contact__submit:active {
+	background-color: var(--color-text) !important;
+	color: #FFFFFF !important;
+	border-color: var(--color-text) !important;
+}
+
+.gallery__arrow:hover,
+.gallery__arrow:focus,
+.gallery__arrow:active {
+	background-color: #FFFFFF !important;
+	color: var(--color-text) !important;
+	border-color: transparent !important;
+}
