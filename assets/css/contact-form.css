@@ -84,3 +84,7 @@
 	color: var(--color-text);
 	font-size: var(--fs-small);
 }
+
+.contact__required {
+	color: #C0392B;
+}
